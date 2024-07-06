@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
 import { Input } from "../components/ui/input";
@@ -29,6 +30,13 @@ const LoginPage = () => {
   <CardFooter>
     <Button className="w-full">Sign in</Button>
   </CardFooter>
+  <div className="mb-4 text-center text-m">
+        Don't have an account?{" "}
+        <Link to="/register" className="underline">
+          Sign up
+        </Link>
+      </div>
+       
 </Card>
     </section>
   )
