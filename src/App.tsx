@@ -1,5 +1,7 @@
 
-import './App.css'
+
+import { Button } from "./components/ui/button"
+
 
 function App() {
 
@@ -7,7 +9,8 @@ function App() {
   return (
     <>
       <h1>
-        Hello World
+      <Button variant="destructive">Button</Button>
+
       </h1>
     </>
   )
