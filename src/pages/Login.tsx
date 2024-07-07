@@ -96,12 +96,7 @@ const LoginPage = () => {
             </div>
           </div>
         </CardFooter>
-        <div className="mb-4 text-center text-m">
-          Don't have an account?{" "}
-          <Link to="/auth/register" className="underline">
-            Sign up
-          </Link>
-        </div>
+       
       </Card>
     </section>
   );
