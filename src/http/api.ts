@@ -1,4 +1,5 @@
 import axios from "axios"
+import useTokenStore from "../store";
 const api = axios.create({
     baseURL: "http://localhost:5513",
     headers:{
@@ -6,6 +7,13 @@ const api = axios.create({
     }
 })
 
+api.interceptors.request.use((config) => {
+    const token = useTokenStore.getState().token;
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
 
 export const login = async (data:{email:string; password:string})=>{
     return api.post("/api/users/login",data)
